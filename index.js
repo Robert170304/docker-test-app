@@ -70,7 +70,7 @@ const server = http.createServer(async (req, res) => {
     // still start server so healthcheck can show unready state; app will return DB errors on /db
   }
 
-  server.listen(3000, () => {
+  server.listen(3000, "0.0.0.0", () => {
     console.log('Server running on port 3000');
   });
 })();
